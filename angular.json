@@ -51,6 +51,7 @@
 				},
 				"esbuild": {
 					"builder": "@angular-devkit/build-angular:application",
+					"outputPath": "dist/shell",
 					"options": {
 						"outputPath": "dist/shell",
 						"index": "projects/shell/src/index.html",
@@ -71,18 +72,6 @@
 					},
 					"configurations": {
 						"production": {
-							"budgets": [
-								{
-									"type": "initial",
-									"maximumWarning": "500kb",
-									"maximumError": "1mb"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
-								}
-							],
 							"outputHashing": "all"
 						},
 						"development": {
@@ -176,18 +165,6 @@
 					},
 					"configurations": {
 						"production": {
-							"budgets": [
-								{
-									"type": "initial",
-									"maximumWarning": "500kb",
-									"maximumError": "1mb"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "2kb",
-									"maximumError": "4kb"
-								}
-							],
 							"outputHashing": "all"
 						},
 						"development": {
@@ -247,5 +224,8 @@
 				}
 			}
 		}
-	}
+  },
+  "cli": {
+    "analytics": false
+  }
 }
